@@ -2,7 +2,7 @@
 
 ## Materials for paper:
 M. V. Neyzov.
-Symmetry based development and verification of reactive system programs // Modeling and Analysis of Information Systems, vol. ?, no. 1, pp. ?, 2026. DOI: ?.
+Using Symmetry in Programming and Verification of a Resource Arbiter // Modeling and Analysis of Information Systems, vol. 33, no. 1, pp. 90–116, 2026. https://doi.org/10.18255/1818-1015-2026-1-90-116
 
 ## Resume
 
