@@ -1,7 +1,7 @@
 #include <iostream>
 #include "dataTypes.h"
 
-class ArbiterCore {
+class ArbiterKernel {
 private:
    Q q = freed;
 

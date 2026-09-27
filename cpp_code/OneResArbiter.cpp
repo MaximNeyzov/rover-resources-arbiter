@@ -1,4 +1,4 @@
-#include "core.cpp"
+#include "ArbiterKernel.cpp"
 
 // Значения индексов:
 struct V {
@@ -27,7 +27,7 @@ const int prior[10] = { 1, 1, 2, 1, 1, 1, 1, 1, 1, 2 };
 
 class OneResArbiter {
 private:
-   ArbiterCore core;
+   ArbiterKernel kernel;
    V val; // Index values.
    Out out;
 
@@ -67,10 +67,10 @@ private:
    void iter(Mes mes, int proc) {
       bool pi = get_pi(proc);
       bool pj = get_pj(proc);
-      I ind = core.getIndex(pi, pj);
+      I ind = kernel.getIndex(pi, pj);
       indUpd(proc, ind);
       bool highPrior = hp();
-      iOut iout = core.iter(mes, pi, pj, highPrior);
+      iOut iout = kernel.iter(mes, pi, pj, highPrior);
       convert(iout);
       print_info(); // for debug.
    }
@@ -99,7 +99,7 @@ public:
 
    // Владелец ресурса.
    int owner() {
-      Q q = core.getAtmState();
+      Q q = kernel.getAtmState();
       switch (q) {
          case Q::busy_i:
          case Q::wait_j:
@@ -112,7 +112,7 @@ public:
 
    // Процесс, ожидающий ресурс.
    int waiting() {
-      Q q = core.getAtmState();
+      Q q = kernel.getAtmState();
       if (q == Q::wait_j) return val.j;
       else return EMPTY;
    }

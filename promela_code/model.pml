@@ -1,8 +1,8 @@
-c_decl{ #include "Core.c" };
+c_decl{ #include "Kernel.c" };
 
 // use "./pan -r" for debug.
 
-// Core inputs:
+// Kernel inputs:
 c_decl{
    Mes mes = FREE;
    bool pi = false;
@@ -10,7 +10,7 @@ c_decl{
    bool highPrior = false;
 };
 
-// Core outputs:
+// Kernel outputs:
 c_decl{
    I ind = i;
    iOut iout = empty;
@@ -20,7 +20,7 @@ c_decl{
 c_track "&mes" "sizeof(char)" "Matched";
 c_track "&ind" "sizeof(char)" "Matched";
 c_track "&highPrior" "sizeof(char)" "Matched";
-c_track "&q" "sizeof(char)" "Matched"; // "q" defined in "Core.c"
+c_track "&q" "sizeof(char)" "Matched"; // "q" defined in "Kernel.c"
 c_track "&iout" "sizeof(char)" "Matched";
 
 // Распечатать информацию для отладки:

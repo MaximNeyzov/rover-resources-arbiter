@@ -1,4 +1,4 @@
-// Arbiter Core.
+// Arbiter Kernel.
 #include "dataTypes.h"
 
 // private:

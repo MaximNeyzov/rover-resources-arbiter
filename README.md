@@ -7,12 +7,12 @@ Using Symmetry in Programming and Verification of a Resource Arbiter // Modeling
 ## Resume
 
 * Arbiter is to ensure mutually exclusive access of processes to resources.
-* Arbiter is a program consisting of a `core` and its `wrapper`.
-* The core uses process number `symmetry`.
-* The core coordinates the actions in the wrapper.
-* Implemented `model checking` of the core.
-* The model of core is automatically `extracted` from the program.
-* The core guarantees the satisfiability of `temporal properties`.
+* Arbiter is a program consisting of a `kernel` and its `wrapper`.
+* The kernel uses process number `symmetry`.
+* The kernel coordinates the actions in the wrapper.
+* Implemented `model checking` of the kernel.
+* The model of kernel is automatically `extracted` from the program.
+* The kernel guarantees the satisfiability of `temporal properties`.
 
 [//]:----------------------------------------------------
 
@@ -33,5 +33,5 @@ Properties Specification Language: **`LTL (Linear Temporal Logic)`**
 ## Content
 
 * Arbiter – [C++ code](./cpp_code)
-* Core – [C code](./c_code)
-* Model of core – [Promela code](./promela_code)
+* Kernel – [C code](./c_code)
+* Model of kernel – [Promela code](./promela_code)
